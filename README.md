@@ -41,7 +41,6 @@ chmod u+x *.sh
 ./factory_leather_card_case.sh
 ./factory_mugcup.sh
 ./factory_poster_b1.sh
-./factory_poster_b1.sh
 ./factory_poster_b2.sh
 ./factory_towel_l.sh
 
