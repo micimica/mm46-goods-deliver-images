@@ -69,3 +69,11 @@ docker image rm -f $(docker image ls -q -f reference=micimica/imagemagick:latest
 | [Towel - Large size](https://factory.pixiv.net/products/towel) | images-dist/mm46_towel_l_neutral.png<br>images-dist/mm46_towel_l_chromatic.png | [Neutral](https://micimica.booth.pm/items/2285137)<br>[Chromatic](https://micimica.booth.pm/items/2285271) |
 | [Blanket](https://factory.pixiv.net/products/blanket) | images-dist/mm46_blanket_neutral.png<br>images-dist/mm46_blanket_chromatic.png | - |
 | [Leather Card Case](https://factory.pixiv.net/products/leather_card_case) | images-dist/mm46_leather_card_case_neutral.png<br>images-dist/mm46_leather_card_case_chromatic.png | - |
+
+## License
+
+### Source Code
+MIT License
+
+### Image File
+Public Domain (CC0)
