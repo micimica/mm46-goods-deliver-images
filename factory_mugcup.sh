@@ -9,8 +9,12 @@
 # repeatable unit : 118 x 2 = 236 px
 # -----------------------------
 
+UNITSIZE=236
+TEMPSIZE=$(( $UNITSIZE * 3 ))
+
 # neutral variation
-convert -density 1200 -resize 240x240 -crop 236x236+2+2 resources/mm46_neutral_unit.svg mm46_mugcup_neutral_unit.png
+convert -density 1200 -resize ${TEMPSIZE}x${TEMPSIZE} -fuzz 10% -trim resources/mm46-3_neutral_unit.svg mm46_mugcup_neutral_unit_temp.png
+convert -density 1200 -resize ${UNITSIZE}x${UNITSIZE} mm46_mugcup_neutral_unit_temp.png mm46_mugcup_neutral_unit.png
 convert +append `seq 1 25 | awk '{printf "mm46_mugcup_neutral_unit.png "}'` mm46_mugcup_neutral_line.png
 convert -append `seq 1 25 | awk '{printf "mm46_mugcup_neutral_line.png "}'` mm46_mugcup_neutral_rect.png
 convert -density 1200 -rotate +30 mm46_mugcup_neutral_rect.png mm46_mugcup_neutral_rot.png
@@ -18,7 +22,8 @@ convert -density 1200 -gravity center -crop 3591x1495-1796-748 mm46_mugcup_neutr
 rm -f mm46_mugcup_neutral_*.png
 
 # chromatic variation
-convert -density 1200 -resize 240x240 -crop 236x236+2+2 resources/mm46_chromatic_unit.svg mm46_mugcup_chromatic_unit.png
+convert -density 1200 -resize ${TEMPSIZE}x${TEMPSIZE} -fuzz 10% -trim resources/mm46-3_chromatic_unit.svg mm46_mugcup_chromatic_unit_temp.png
+convert -density 1200 -resize ${UNITSIZE}x${UNITSIZE} mm46_mugcup_chromatic_unit_temp.png mm46_mugcup_chromatic_unit.png
 convert +append `seq 1 25 | awk '{printf "mm46_mugcup_chromatic_unit.png "}'` mm46_mugcup_chromatic_line.png
 convert -append `seq 1 25 | awk '{printf "mm46_mugcup_chromatic_line.png "}'` mm46_mugcup_chromatic_rect.png
 convert -density 1200 -rotate +30 mm46_mugcup_chromatic_rect.png mm46_mugcup_chromatic_rot.png

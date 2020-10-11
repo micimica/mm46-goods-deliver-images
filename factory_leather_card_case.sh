@@ -9,8 +9,12 @@
 # repeatable unit : 62.5 x 2 = 125 px
 # -----------------------------
 
+UNITSIZE=125
+TEMPSIZE=$(( $UNITSIZE * 3 ))
+
 # neutral variation
-convert -density 1200 -resize 129x129 -crop 125x125+2+2 resources/mm46_neutral_unit.svg mm46_leather_card_case_neutral_unit.png
+convert -density 1200 -resize ${TEMPSIZE}x${TEMPSIZE} -fuzz 10% -trim resources/mm46-3_neutral_unit.svg mm46_leather_card_case_neutral_unit_temp.png
+convert -density 1200 -resize ${UNITSIZE}x${UNITSIZE} mm46_leather_card_case_neutral_unit_temp.png mm46_leather_card_case_neutral_unit.png
 convert +append `seq 1 25 | awk '{printf "mm46_leather_card_case_neutral_unit.png "}'` mm46_leather_card_case_neutral_line.png
 convert -append `seq 1 25 | awk '{printf "mm46_leather_card_case_neutral_line.png "}'` mm46_leather_card_case_neutral_rect.png
 convert -density 1200 -rotate +30 mm46_leather_card_case_neutral_rect.png mm46_leather_card_case_neutral_rot.png
@@ -18,7 +22,8 @@ convert -density 1200 -gravity center -crop 1914x1276-957-638 mm46_leather_card_
 rm -f mm46_leather_card_case_neutral_*.png
 
 # chromatic variation
-convert -density 1200 -resize 129x129 -crop 125x125+2+2 resources/mm46_chromatic_unit.svg mm46_leather_card_case_chromatic_unit.png
+convert -density 1200 -resize ${TEMPSIZE}x${TEMPSIZE} -fuzz 10% -trim resources/mm46-3_chromatic_unit.svg mm46_leather_card_case_chromatic_unit_temp.png
+convert -density 1200 -resize ${UNITSIZE}x${UNITSIZE} mm46_leather_card_case_chromatic_unit_temp.png mm46_leather_card_case_chromatic_unit.png
 convert +append `seq 1 25 | awk '{printf "mm46_leather_card_case_chromatic_unit.png "}'` mm46_leather_card_case_chromatic_line.png
 convert -append `seq 1 25 | awk '{printf "mm46_leather_card_case_chromatic_line.png "}'` mm46_leather_card_case_chromatic_rect.png
 convert -density 1200 -rotate +30 mm46_leather_card_case_chromatic_rect.png mm46_leather_card_case_chromatic_rot.png
