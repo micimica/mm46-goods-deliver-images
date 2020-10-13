@@ -1,7 +1,7 @@
 # Design Data (by Microsoft PowerPoint File)
 
-## mm46_unit\mm46-3_*_unit.pptx
-Design for resources\mm46-3_*_unit.svg.
+## mm46_unit\mm46-4_unit.pptx
+Design for resources\mm46-4_unit.svg.
 Open this file, select an image, and save as images (`.svg).
 
 ## mm46_can_badge_25mm\mm46_can_badge_25mm_*.pptx
