@@ -30,6 +30,8 @@ docker build -t micimica/imagemagick:latest .
 
 ### Generate
 ```sh
+cd /c/Users/$USERNAME/mm46-goods-deliver-images
+
 docker run --rm -it --name micimica-imagemagick -v `pwd`:/mm46-goods-deliver-images micimica/imagemagick:latest
 
 cd /mm46-goods-deliver-images
@@ -43,6 +45,8 @@ chmod u+x *.sh
 ./factory_poster_b1.sh
 ./factory_poster_b2.sh
 ./factory_towel_l.sh
+
+./printer_paper_a3.sh
 
 chmod 777 images-dist/*.png
 exit
@@ -61,15 +65,16 @@ docker image rm -f $(docker image ls -q -f reference=micimica/imagemagick:latest
 ## Reference of Goods / Image
 | Goods Variation | Image File | Example |
 |:---|:---|:---|
-| [Poster - B1 size](https://factory.pixiv.net/products/fast_poster) | images-dist/mm46_poster_b1_neutral.png<br>images-dist/mm46_poster_b1_chromatic.png | |
-| [Poster - B2 size](https://factory.pixiv.net/products/fast_poster) | images-dist/mm46_poster_b2_neutral.png<br>images-dist/mm46_poster_b2_chromatic.png | |
-| [Clear File Folder - A4 size](https://factory.pixiv.net/products/clear_file_folder) | images-dist/mm46_clear_file_folder_a4_neutral.png<br>images-dist/mm46_clear_file_folder_a4_chromatic.png | |
-| [Can Badge - Circle 25mm](https://factory.pixiv.net/products/can_badge) | images-manually/mm46_can_badge_25mm_neutral_yang.png<br>images-manually/mm46_can_badge_25mm_neutral_ying.png<br>images-manually/mm46_can_badge_25mm_chromatic_yang.png<br>images-manually/mm46_can_badge_25mm_chromatic_ying.png | |
-| [Pin Badge](https://factory.pixiv.net/products/pin_badge) | images-manually/mm46_pin_badge_neutral_yang.png<br>images-manually/mm46_pin_badge_neutral_ying.png<br>images-manually/mm46_pin_badge_chromatic_yang.png<br>images-manually/mm46_pin_badge_chromatic_ying.png | |
-| [Mug Cup](https://factory.pixiv.net/products/standard_mug) | images-dist/mm46_mugcup_neutral.png<br>images-dist/mm46_mugcup_chromatic.png | |
-| [Towel - Large size](https://factory.pixiv.net/products/towel) | images-dist/mm46_towel_l_neutral.png<br>images-dist/mm46_towel_l_chromatic.png | |
-| [Blanket](https://factory.pixiv.net/products/blanket) | images-dist/mm46_blanket_neutral.png<br>images-dist/mm46_blanket_chromatic.png | |
-| [Leather Card Case](https://factory.pixiv.net/products/leather_card_case) | images-dist/mm46_leather_card_case_neutral.png<br>images-dist/mm46_leather_card_case_chromatic.png | |
+| [Poster - B1 size](https://factory.pixiv.net/products/fast_poster) | images-dist/mm46_poster_b1.png | [link](https://micimica.booth.pm/items/2448419) |
+| [Poster - B2 size](https://factory.pixiv.net/products/fast_poster) | images-dist/mm46_poster_b2.png | [link](https://micimica.booth.pm/items/2448419) |
+| [Clear File Folder - A4 size](https://factory.pixiv.net/products/clear_file_folder) |  | |
+| [Can Badge - Circle 25mm](https://factory.pixiv.net/products/can_badge) |  | |
+| [Pin Badge](https://factory.pixiv.net/products/pin_badge) |  | |
+| [Mug Cup](https://factory.pixiv.net/products/standard_mug) |  | |
+| [Towel - Large size](https://factory.pixiv.net/products/towel) |  | |
+| [Blanket](https://factory.pixiv.net/products/blanket) |  | |
+| [Leather Card Case](https://factory.pixiv.net/products/leather_card_case) |  | |
+| [Paper - A2-A4 size<br>(with home printer)](https://factory.pixiv.net/products/blanket) | images-dist/mm46_a3.png | |
 
 ## License
 
